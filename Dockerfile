@@ -3,7 +3,7 @@ FROM phusion/baseimage:0.9.16
 CMD ["/sbin/my_init"]
 
 RUN apt-get update && \
-  apt-get install -y build-essential python python-dev python-pip
+  apt-get install -y libmysqlclient-dev build-essential python python-dev python-pip
 
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
