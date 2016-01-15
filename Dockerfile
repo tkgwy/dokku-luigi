@@ -9,7 +9,8 @@ ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
 RUN mkdir /etc/luigi
-ADD client.cfg /etc/luigi/client.cfg
+
+ADD client.cfg.template /etc/luigi/client.cfg.template
 
 RUN mkdir /var/log/luigid
 ADD logrotate.cfg /etc/logrotate.d/luigid
